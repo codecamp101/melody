@@ -43,3 +43,35 @@ fm.addEventListener('submit' , (e) => {
 start.addEventListener('click', () => {
     pan.classList.toggle('on');
 });
+// this formats a Unix number into a human-readable date 
+const dob = new Date ('7/22/2011').getTime();//date format in javascript mm-dd-yyy
+pan.querySelector('#dob').textContent = Intl.DateTimeFormat('en-US', { dateStyle: 'full'}).format(dob);
+
+//FUNCTIONS 
+// A Function is a group of statements that does not run unless when called
+function calculator () {
+    console.log(2 + 4);
+    console.log(10 - 5);
+    console.log(10 / 2);
+    console.log(3 * 3);
+    console.log(10 % 2); //modulus (short form is mod): the reminder of a division
+}
+calculator();
+
+function calledConfetti () {
+    /*
+    const t = "ME";
+    const u = "12345";
+    console.log(t + u); 
+    */
+    const d = new Date("04/14/2025").getDate();//14
+    const m = new Date("04/14/2025").getMonth();//3
+    const today = Date.now();
+    console.log(new Date(today).getDate())
+    if(new Date(today).getDate() === d && new Date(today).getMonth() === m){
+     pan.classList.add('bgi');
+    }
+    console.log(d)
+    console.log(m)
+}
+calledConfetti();
