@@ -51,12 +51,12 @@ body{
   /* border: 1px solid red; */
   height: 3em;
   width: 3em;
-  background-image: url();
+  background-image: url(bulb-outline.svg);
   
 }
 #txt{
    /* border: 1px solid red; */
-   font-size: 150%;
+   font-size: 100%;
    font-weight: 500;
    font-family: monospace;
 }
@@ -74,11 +74,11 @@ body{
 }
 #backward{
     left: 4em;
-
+    background-image: url(chevron-back-outline.svg);
 }
 #forward{
     right: 4em;
-
+    background-image: url(chevron-forward-outline.svg);
 }
 button{
     /* border: 1px solid red; */
@@ -91,48 +91,143 @@ button{
 #restartBtn{
     height: 4em;
     width: 4em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     transition: box-shadow .5s;
+    background-image: url(refresh-outline.svg);
 
 }
 #hintBtn{
     height: 4em;
     width: 4em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-shadow: none;
+    background-image: url(help-circle-outline.svg);
+    transition: box-shadow .5s;
 }
 #action{
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 2em;
+    margin: 0 auto;
+    width: 70%;
+    padding: 3em 1em;
+    /* border: 1px solid red; */
+
 }
 #checkBtn{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 2em;
-    background-color: #8b008b;
-    background-image: url();
+    background-color: #6211a3;
     display: flex;
     align-items: center;
     padding-left: 2em;
     letter-spacing: 3px;
+    margin-left: auto;
 }
 #checkBtn > span{
     background-color: #fff;
     font-size: 110%;
-    font-weight: 500%;
+    font-weight: 500;
 }
 #checkBtn > i {
 height: 4em;
 width: 4em;
-background-image:url();
+background-image:url(arrow-forward-outline.svg);
 
 }
 #cup{
     height: 4em;
-    width: 4em;;
-    background-image:
+    width: 4em;
+    background-image: url(trophy-outline.svg);
+    /* border: 1px solid red; */
+    position: relative;
 }
+#cup > i{
+    position: absolute;
+    top: 0;
+    right:0;
+    border-radius: 5px;
+    background-color:#033475;
+    color:#fff;
+    padding: 3px 5px;
+}
+/*to apply changes to a new element*/
+ #bulb,#cup >i ,#checkBtn,#hintBtn,#restartBtn,#forward,#backward{
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+ }
+ footer{
+    background: #f9f9f9;
+    position: sticky;
+    top: 100%;
+    color:#555;
+    padding: 2em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+ }
+ #author{
+    color:#555;
+ }
+ /*responsive design*/
+@media (width <= 480px) {
+    .tile{
+        font-size: 100%;
+    }
+    #forward, #backward {
+        background-size: 30%;
+        height: 2em;
+        width: 2em;
+    }
+    #word{
+        position: static;
+       }
+       #backward {
+         left: 0;
+       }
+       #action {
+          border: 1px dotted red;
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: center;
+       }
+       #checkBtn {
+        margin-left: 0;
+        background-size: 40%
+       }
+       #checkBtn > i {
+        height: 2em;
+        width: 2.5em;
+       }
+       #restart {
+        background-size: 40%;
+        width: 3em;
+        height: 3em;
+       }
+       #hint {
+        background-size: 40%;
+        width: 3em;
+        height: 3em;
+       }
+       #cup {
+        background-size: 40%;
+        width: 3em;
+        height: 3em;
+       }
+       #checkBtn > span {
+        letter-spacing: 0;
+       }
+       #checkBtn {
+        padding-left: 1em;
+       }
+    }
+
+  @media (width<= 480px) {
+
+ }
+
 
 
 
